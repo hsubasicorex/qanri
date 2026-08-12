@@ -1,0 +1,2 @@
+import { Shell } from "../site";
+export default function Privacy(){return <Shell><main><section className="legal"><p className="eyebrow">LEGAL</p><h1>Privacy</h1><p>QANRI's final public privacy policy is pending legal review and approval before launch.</p><p>This pilot-stage website does not publish unapproved legal guarantees. Demo-request data will only be processed after the lead-delivery configuration and final privacy notice are approved.</p></section></main></Shell>}
