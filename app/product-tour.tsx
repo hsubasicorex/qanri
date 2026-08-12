@@ -5,7 +5,7 @@ const steps=[
   {id:"assign",label:"Assign",title:"Put real work in motion.",body:"Foremen assign tasks to real people. Ownership is explicit, and reassignment never erases the history.",screen:"TODAY",task:"Rail connection check",meta:"HOISTWAY · LEVEL 1",status:"ASSIGNED"},
   {id:"execute",label:"Execute",title:"Make the field interaction small.",body:"Workers see what is theirs, capture required evidence, add a short note and move on.",screen:"TASK DETAIL",task:"Rail connection check",meta:"1 PHOTO REQUIRED · HIGH PRIORITY",status:"START WORK"},
   {id:"offline",label:"Synchronize",title:"Keep moving through connection loss.",body:"Pending work and evidence remain durable and synchronize when a useful connection returns.",screen:"SUBMISSION STATUS",task:"Saved on this device",meta:"EVIDENCE QUEUED SECURELY",status:"PENDING SYNC"},
-  {id:"verify",label:"Verify",title:"Approve—or return the work.",body:"Verification is a decision, not an overwrite. Rework creates a new version while the original remains intact.",screen:"AWAITING REVIEW",task:"Rail connection check",meta:"SUBMISSION #1 · 1 PHOTO",status:"REVIEW"},
+  {id:"verify",label:"Verify",title:"Approve the work or return it.",body:"A review does not overwrite the first submission. Corrected work becomes a new version with its own note and evidence.",screen:"AWAITING REVIEW",task:"Connection inspection",meta:"SUBMISSION 01 · 1 PHOTO",status:"REVIEW"},
   {id:"understand",label:"Understand",title:"See the cause, owner and next action.",body:"Blocked work stays connected to the reason it stopped and the person who must act next.",screen:"OPERATING PICTURE",task:"2 blockers need action",meta:"3 SUBMISSIONS · 2 REVIEWS",status:"OPEN PULSE"},
 ];
 

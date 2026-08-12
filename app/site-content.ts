@@ -22,12 +22,12 @@ export const pages: Record<string, PageContent> = {
     { title: "Required documents in one place.", body: "Create document slots for commissioning records, inspection documents, warranty material and other closeout requirements." },
     { title: "Client-safe by design.", body: "The handover package is intentionally separated from private internal management data." },
   ]},
-  "platform/ask-qanri": { title: "Ask the operation.", body: "QANRI AI is an interface to the operating record—not a replacement for it.", sections: [
+  "platform/ask-qanri": { title: "Ask the operation.", body: "QANRI AI is an interface to the operating record. It does not replace that record.", sections: [
     { title: "Grounded before impressive.", body: "Answers are designed to come from authorized QANRI sources such as tasks, submissions, blockers, photos and daily reports." },
     { title: "Same access boundaries. New interface.", body: "AI does not get unrestricted database access and does not bypass normal QANRI authorization." },
     { title: "Optional by architecture.", body: "If no AI provider is configured, QANRI continues to perform its core operational job normally." },
   ]},
-  solutions: { title: "For teams whose work has to move—and be proven.", body: "QANRI is designed for field organizations with multiple jobs, real crews, real blockers and real accountability.", sections: [
+  solutions: { title: "For teams that need to complete and document field work.", body: "QANRI is designed for field organizations managing multiple jobs, crews, blockers and review responsibilities.", sections: [
     { title: "High-fit operations", body: "Specialty contractors, installation and commissioning teams, multi-project operations, evidence-heavy work and repeated handover requirements." },
     { title: "A focused execution layer", body: "QANRI is not a BIM engine, accounting suite, CRM, estimating platform or generic inspection-form builder." },
   ]},
@@ -46,7 +46,7 @@ export const pages: Record<string, PageContent> = {
   security: { title: "Operational truth only works when access boundaries are real.", body: "QANRI is designed so the person, project and company context behind an action matters as much as the action itself.", sections: [
     { title: "Company and project boundaries", body: "Company data is scoped by company identity. Foreman authority is project-grant based. Worker access remains narrow and task-specific." }, { title: "Evidence is private by default", body: "Project evidence is stored privately and accessed through authorized, time-limited application flows." }, { title: "AI stays inside authorization", body: "QANRI AI uses authorization-aware tools and cited operational sources." }
   ]},
-  about: { title: "Built from the field, not around it.", body: "QANRI grew from a simple operational problem: crews are working, projects are moving, evidence is arriving and delays are happening—but management still has to chase the truth.", sections: [
-    { title: "Why QANRI exists", body: "Messages, spreadsheets, photos and software did not form a continuously trusted operating picture. QANRI connects work, people, evidence, blockers, verification and the next action." }, { title: "The name", body: "QANRI draws from a Quechua conversational expression used in the sense of ‘and you?’—a simple question about accountability, continuity and what comes next." }, { title: "The company", body: "QANRI is developed by CoreX Robotics Services LLC, a New Jersey field engineering and industrial services company." }
+  about: { title: "Built from field experience.", body: "QANRI grew from a practical problem. Crews were working and projects were moving, but management still had to chase updates across messages, photos and spreadsheets.", sections: [
+    { title: "Why QANRI exists", body: "Messages, spreadsheets and photos did not provide one reliable view of the operation. QANRI connects work, people, evidence, blockers, review and the next action." }, { title: "The name", body: "QANRI draws from a Quechua conversational expression used in the sense of ‘and you?’ It is a direct question about responsibility and what happens next." }, { title: "The company", body: "QANRI is developed by CoreX Robotics Services LLC, a New Jersey field engineering and industrial services company." }
   ]},
 };
