@@ -28,7 +28,7 @@ type Copy = {
 
 export const copy: Record<Locale, Copy> = {
   en: {
-    dir: "ltr", metaTitle: "QANRI | Operational Intelligence Platform", metaDescription: "Turn field activity into company knowledge, decisive action and verifiable proof.",
+    dir: "ltr", metaTitle: "QANRI | Operational Intelligence Platform", metaDescription: "QANRI connects field execution, company knowledge, evidence, review and AI-assisted decisions in one trusted operating record.",
     nav: { overview: "Overview", intelligence: "Intelligence", languages: "Languages", trust: "Trust" }, appLogin: "App Login", walkthrough: "Book a walkthrough",
     hero: { eyebrow: "OPERATIONAL INTELLIGENCE PLATFORM", title: "The intelligence between work and proof.", body: "QANRI connects people, field execution, company knowledge and evidence in one operational system.", explore: "Explore the operating model", proof: ["Work stays connected to its owner", "Evidence remains tied to the record", "Company knowledge becomes usable in the field"] },
     model: { know: "See the operation as it actually happened.", move: "Direct the right person and next action.", prove: "Verify the work through history and evidence." },
