@@ -2,10 +2,11 @@ import Image from "next/image";
 import Link from "next/link";
 import { pages, type PageContent } from "./site-content";
 import { APP_LINK_LABEL, APP_URL } from "./site-config";
+import { LanguageMenu } from "./language-menu";
 
 const nav = [["Platform","/platform"],["Solutions","/solutions"],["Why QANRI","/why-qanri"],["Security","/security"],["About","/about"]];
 
-export function Header() { return <header className="nav"><Link className="brand-lockup" href="/" aria-label="QANRI home"><Image src="/qanri/QANRI_Web_Lockup_Transparent.png" width={1141} height={304} alt="QANRI. Know. Move. Prove." priority /></Link><nav>{nav.map(([n,h])=><Link className="nav-link" key={h} href={h}>{n}</Link>)}<a className="app-login" href={APP_URL} target="_blank" rel="noreferrer" aria-label={`${APP_LINK_LABEL}. Opens QANRI in a new tab`}><span className="app-login-dot"/>{APP_LINK_LABEL}<span aria-hidden="true">↗</span></a><Link className="button small demo-nav" href="/demo">Book a walkthrough</Link></nav></header> }
+export function Header() { return <header className="nav"><Link className="brand-lockup" href="/" aria-label="QANRI home"><Image src="/qanri/QANRI_Web_Lockup_Transparent.png" width={1141} height={304} alt="QANRI. Know. Move. Prove." priority /></Link><nav>{nav.map(([n,h])=><Link className="nav-link" key={h} href={h}>{n}</Link>)}<LanguageMenu/><a className="app-login" href={APP_URL} target="_blank" rel="noreferrer" aria-label={`${APP_LINK_LABEL}. Opens QANRI in a new tab`}><span className="app-login-dot"/>{APP_LINK_LABEL}<span aria-hidden="true">↗</span></a><Link className="button small demo-nav" href="/demo">Book a walkthrough</Link></nav></header> }
 export function Footer() { return <footer><div className="footer-brand"><Image src="/qanri/QANRI_Web_Lockup_Transparent.png" width={1141} height={304} alt="QANRI. Know. Move. Prove."/><p>Operational intelligence for verifiable operations.</p><strong>A COREX ROBOTICS PRODUCT</strong></div><div className="footer-links">{nav.map(([n,h])=><Link key={h} href={h}>{n}</Link>)}<a className="footer-app-link" href={APP_URL} target="_blank" rel="noreferrer">{APP_LINK_LABEL} ↗</a><Link href="/privacy">Privacy</Link><Link href="/terms">Terms</Link></div><p className="fine">QANRI is developed by CoreX Robotics Services LLC.<br/>© {new Date().getFullYear()} CoreX Robotics Services LLC. All rights reserved. New Jersey, USA.</p></footer> }
 export function Shell({children}:{children:React.ReactNode}) { return <><Header/>{children}<Footer/></> }
 
