@@ -1,8 +1,10 @@
 export type PageContent = { eyebrow?: string; title: string; body: string; sections: { title: string; body: string }[] };
 
 export const pages: Record<string, PageContent> = {
-  platform: { eyebrow: "THE QANRI PLATFORM", title: "From work assigned to work proven.", body: "QANRI gives field operations one connected path from planning and assignment to evidence, verification, rework, blockers and handover.", sections: [
-    { title: "The operating chain", body: "Template → Project → Stage → Task → Assignment → Field execution → Evidence → Submission → Verification / Rework → Handover → Operational intelligence." },
+  platform: { eyebrow: "OPERATIONAL INTELLIGENCE PLATFORM", title: "From work performed to an operation understood.", body: "QANRI connects execution, evidence, responsibility, review and change history in one operational record the company can trust and act on.", sections: [
+    { title: "A system of execution", body: "Planning → Assignment → Field execution → Evidence → Submission → Verification / Rework → Handover." },
+    { title: "A system of record", body: "Responsibility, time, evidence, blockers, review decisions and every submission version remain connected to the work." },
+    { title: "A system of intelligence", body: "The operating record becomes a reliable foundation for understanding what happened, directing what comes next and improving how work moves." },
     { title: "Make ownership explicit.", body: "A task can have real worker assignments with history. Reassignments do not erase who owned the work before." },
     { title: "The work comes back with proof.", body: "Workers submit a short completion note and required evidence. Submissions are versioned and preserved." },
     { title: "Know why the work did not move.", body: "Connect blocked work to the operational reason instead of letting delays disappear into conversations." },
@@ -22,10 +24,11 @@ export const pages: Record<string, PageContent> = {
     { title: "Required documents in one place.", body: "Create document slots for commissioning records, inspection documents, warranty material and other closeout requirements." },
     { title: "Client-safe by design.", body: "The handover package is intentionally separated from private internal management data." },
   ]},
-  "platform/ask-qanri": { title: "Ask the operation.", body: "QANRI AI is an interface to the operating record. It does not replace that record.", sections: [
-    { title: "Grounded before impressive.", body: "Answers are designed to come from authorized QANRI sources such as tasks, submissions, blockers, photos and daily reports." },
+  "platform/ask-qanri": { eyebrow: "THE QANRI STANDARD FOR AI", title: "AI should answer from the operation. Not invent it.", body: "QANRI brings the operational record into the conversation. It shows what is known, where the answer came from and where human judgment still matters.", sections: [
+    { title: "Grounded before impressive.", body: "Operational answers begin with authorized QANRI sources such as tasks, submissions, blockers, photos and daily reports." },
     { title: "Same access boundaries. New interface.", body: "AI does not get unrestricted database access and does not bypass normal QANRI authorization." },
-    { title: "Optional by architecture.", body: "If no AI provider is configured, QANRI continues to perform its core operational job normally." },
+    { title: "Traceable by design.", body: "QANRI separates recorded operational fact from interpretation and keeps the underlying source available for review." },
+    { title: "Human judgment remains visible.", body: "The system is built to identify what it knows and what still requires an accountable human decision." },
   ]},
   solutions: { title: "For teams that need to complete and document field work.", body: "QANRI is designed for field organizations managing multiple jobs, crews, blockers and review responsibilities.", sections: [
     { title: "High-fit operations", body: "Specialty contractors, installation and commissioning teams, multi-project operations, evidence-heavy work and repeated handover requirements." },
@@ -43,10 +46,21 @@ export const pages: Record<string, PageContent> = {
   "solutions/automation-commissioning": { title: "Technical work should not disappear into message threads.", body: "Keep commissioning steps, findings, evidence, corrective work and final verification connected to the people and projects that produced them.", sections: [
     { title: "Keep the technical record connected.", body: "Follow work packages, findings, rework and closeout without burying technical teams in administration." },
   ]},
-  security: { title: "Operational truth only works when access boundaries are real.", body: "QANRI is designed so the person, project and company context behind an action matters as much as the action itself.", sections: [
-    { title: "Company and project boundaries", body: "Company data is scoped by company identity. Foreman authority is project-grant based. Worker access remains narrow and task-specific." }, { title: "Evidence is private by default", body: "Project evidence is stored privately and accessed through authorized, time-limited application flows." }, { title: "AI stays inside authorization", body: "QANRI AI uses authorization-aware tools and cited operational sources." }
+  "why-qanri": { eyebrow: "WHY QANRI", title: "Built from the field. Built to direct the operation.", body: "QANRI was shaped around real operational work, where missing information, unclear responsibility and weak evidence create real consequences. The platform exists to turn that fragmented activity into operational truth.", sections: [
+    { title: "Quality", body: "Make the standard of work visible, measurable and ready to improve." },
+    { title: "Accountability", body: "Show who did the work, when it happened and which evidence supports it." },
+    { title: "Navigation", body: "Turn the operating record into the right person, decision and next action." },
+    { title: "Reliability", body: "Preserve field reality with its versions, decisions and history intact." },
+    { title: "Intelligence", body: "Transform operational activity into knowledge the company can use." },
+    { title: "Know. Move. Prove.", body: "See the operation as it happened. Direct what comes next. Verify the result through responsibility, time and evidence." },
   ]},
-  about: { title: "Built from field experience.", body: "QANRI grew from a practical problem. Crews were working and projects were moving, but management still had to chase updates across messages, photos and spreadsheets.", sections: [
-    { title: "Why QANRI exists", body: "Messages, spreadsheets and photos did not provide one reliable view of the operation. QANRI connects work, people, evidence, blockers, review and the next action." }, { title: "The name", body: "QANRI draws from a Quechua conversational expression used in the sense of ‘and you?’ It is a direct question about responsibility and what happens next." }, { title: "The company", body: "QANRI is developed by CoreX Robotics Services LLC, a New Jersey field engineering and industrial services company." }
+  security: { eyebrow: "THE TRUSTED OPERATIONAL RECORD", title: "Operational intelligence begins with operational truth.", body: "QANRI connects responsibility, time, evidence, review and change history so every important answer can be traced back to the work itself.", sections: [
+    { title: "Company and project boundaries", body: "Company data is scoped by company identity. Foreman authority follows explicit project grants. Worker access stays narrow and task-specific." }, { title: "Evidence stays connected", body: "Project evidence remains attached to the submission, responsibility and operating context it supports." }, { title: "History cannot be rewritten", body: "Submissions, corrections and review decisions remain visible as separate operational events." }, { title: "AI stays inside authorization", body: "Operational AI uses authorization-aware tools and traceable sources rather than unrestricted access." }
+  ]},
+  about: { eyebrow: "QANRI BY COREX ROBOTICS", title: "We build technology around the realities of the work itself.", body: "QANRI is built by CoreX Robotics, combining real operational experience with software, automation and artificial intelligence.", sections: [
+    { title: "Why QANRI exists", body: "Work was moving, but operational truth remained scattered across messages, photos, spreadsheets and individual memory. QANRI connects the work, the evidence, the decision and the next action." },
+    { title: "The name carries the standard", body: "QANRI stands for Quality, Accountability, Navigation, Reliability and Intelligence: five principles that define how the platform sees work and how a company should be able to direct it." },
+    { title: "Built from the field", body: "QANRI was shaped by installation, service, modernization and field coordination work where missing information, unclear responsibility and weak evidence have direct consequences." },
+    { title: "The company behind QANRI", body: "QANRI is developed by CoreX Robotics Services LLC, operating publicly as CoreX Robotics from New Jersey, USA." }
   ]},
 };
