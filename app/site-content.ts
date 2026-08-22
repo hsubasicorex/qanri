@@ -24,11 +24,11 @@ export const pages: Record<string, PageContent> = {
     { title: "Required documents in one place.", body: "Create document slots for commissioning records, inspection documents, warranty material and other closeout requirements." },
     { title: "Client-safe by design.", body: "The handover package is intentionally separated from private internal management data." },
   ]},
-  "platform/ask-qanri": { eyebrow: "THE QANRI STANDARD FOR AI", title: "AI should answer from the operation. Not invent it.", body: "QANRI brings the operational record into the conversation. It shows what is known, where the answer came from and where human judgment still matters.", sections: [
-    { title: "Grounded before impressive.", body: "Operational answers begin with authorized QANRI sources such as tasks, submissions, blockers, photos and daily reports." },
-    { title: "Same access boundaries. New interface.", body: "AI does not get unrestricted database access and does not bypass normal QANRI authorization." },
-    { title: "Traceable by design.", body: "QANRI separates recorded operational fact from interpretation and keeps the underlying source available for review." },
-    { title: "Human judgment remains visible.", body: "The system is built to identify what it knows and what still requires an accountable human decision." },
+  "platform/ask-qanri": { eyebrow: "YOUR COMPANY'S OPERATIONAL INTELLIGENCE", title: "Every person can ask. The operation can answer.", body: "Ask QANRI places a company-specific AI assistant beside the people doing the work and the people directing it. It combines authorized company knowledge with live operational context so answers are useful where decisions happen.", sections: [
+    { title: "Guidance beside the technician.", body: "A person in the field can ask how an assembly should be completed, what an approved procedure requires or what to check when a fault interrupts the work." },
+    { title: "An operating assistant beside management.", body: "A manager can ask what is moving, what is delayed, which evidence is missing and who owns the next action without assembling the answer from calls and messages." },
+    { title: "Built around company knowledge.", body: "Answers can begin with the procedures, records and operating context authorized for that company, rather than a generic response detached from the work." },
+    { title: "Grounded, traceable and permission-aware.", body: "QANRI keeps source context and access boundaries visible, separates recorded fact from interpretation and leaves accountable decisions with people." },
   ]},
   solutions: { title: "For teams that need to complete and document field work.", body: "QANRI is designed for field organizations managing multiple jobs, crews, blockers and review responsibilities.", sections: [
     { title: "High-fit operations", body: "Specialty contractors, installation and commissioning teams, multi-project operations, evidence-heavy work and repeated handover requirements." },
