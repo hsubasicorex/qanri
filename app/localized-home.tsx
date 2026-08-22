@@ -3,9 +3,11 @@ import Link from "next/link";
 import { APP_URL } from "./site-config";
 import { copy, localeNames, productLanguages, type Locale } from "./i18n";
 import { LanguageMenu } from "./language-menu";
+import { depthCopy } from "./i18n-depth";
 
 export function LocalizedHome({ locale }: { locale: Locale }) {
   const t = copy[locale];
+  const d = depthCopy[locale];
   return <div className="localized-site" lang={locale} dir={t.dir}>
     <header className="nav localized-nav">
       <Link className="brand-lockup" href={`/${locale}`} aria-label="QANRI home"><Image src="/qanri/QANRI_Web_Lockup_Transparent.png" width={1141} height={304} alt="QANRI. Know. Move. Prove." priority /></Link>
@@ -24,11 +26,25 @@ export function LocalizedHome({ locale }: { locale: Locale }) {
 
       <section className="locale-flow"><div><p className="micro-label dark">{t.flow.eyebrow}</p><h2>{t.flow.title}</h2><p>{t.flow.body}</p></div><ol>{t.flow.steps.map(([title, body], index)=><li key={title}><span>{String(index + 1).padStart(2,"0")}</span><div><h3>{title}</h3><p>{body}</p></div></li>)}</ol></section>
 
+      <section className="locale-questions"><div><p className="micro-label dark">{d.questions.eyebrow}</p><h2>{d.questions.title}</h2><p>{d.questions.body}</p></div><ol>{d.questions.items.map((item,index)=><li key={item}><span>{String(index+1).padStart(2,"0")}</span><strong>{item}</strong></li>)}</ol></section>
+
+      <section className="locale-evidence-rich"><div className="evidence-photo"><Image src="/qanri/editorial/envato/qanri-field-evidence.jpg" fill sizes="(max-width: 900px) 100vw, 50vw" alt="" /></div><div className="evidence-copy"><p className="micro-label dark">{d.evidence.eyebrow}</p><h2>{d.evidence.title}</h2><p>{d.evidence.body}</p><div>{d.evidence.items.map(([title,body],index)=><article key={title}><span>{String(index+1).padStart(2,"0")}</span><h3>{title}</h3><p>{body}</p></article>)}</div></div></section>
+
+      <section className="locale-comparison"><div><p className="micro-label">{d.comparison.eyebrow}</p><h2>{d.comparison.title}</h2></div><div className="comparison-table"><header><span>{d.comparison.before}</span><span>{d.comparison.after}</span></header>{d.comparison.rows.map(([before,after])=><article key={before}><p>{before}</p><p>{after}</p></article>)}</div></section>
+
+      <section className="locale-offline-rich"><div className="offline-signal" aria-hidden="true"><span/><span/><span/><b>OFFLINE<br/>READY</b></div><div><p className="micro-label">{d.offline.eyebrow}</p><h2>{d.offline.title}</h2><p>{d.offline.body}</p><ul>{d.offline.items.map(item=><li key={item}>{item}</li>)}</ul></div></section>
+
+      <section className="locale-roles-rich"><div><p className="micro-label dark">{d.roles.eyebrow}</p><h2>{d.roles.title}</h2><p>{d.roles.body}</p></div><div className="role-ledger">{d.roles.items.map(([title,mode,body],index)=><article key={title}><span>{String(index+1).padStart(2,"0")}</span><div><small>{mode}</small><h3>{title}</h3></div><p>{body}</p></article>)}</div></section>
+
       <section className="locale-ai" id="intelligence"><div className="locale-ai-intro"><p className="micro-label">{t.ai.eyebrow}</p><h2>{t.ai.title}</h2><p>{t.ai.body}</p></div><div className="locale-ai-orbit"><div className="orbit-ring orbit-one"/><div className="orbit-ring orbit-two"/><div className="orbit-core"><Image src="/qanri/QANRI_Icon_DarkBackground.png" width={240} height={180} alt="QANRI"/><b>ASK QANRI</b><span>{localeNames[locale]}</span></div></div><div className="locale-ai-cards"><article><span>01</span><p>{t.ai.fieldRole}</p><h3>“{t.ai.fieldQuestion}”</h3><small>{t.ai.fieldAnswer}</small></article><article><span>02</span><p>{t.ai.managerRole}</p><h3>“{t.ai.managerQuestion}”</h3><small>{t.ai.managerAnswer}</small></article></div><strong>{t.ai.close}</strong></section>
 
       <section className="locale-languages" id="languages"><div><p className="micro-label dark">{t.language.eyebrow}</p><h2>{t.language.title}</h2><p>{t.language.body}</p></div><div className="language-status-list">{productLanguages.map(item=><article key={item.locale}><b lang={item.locale}>{localeNames[item.locale]}</b><span className={item.status}>{item.status === "available" ? t.language.available : t.language.preparing}</span></article>)}</div><p className="language-note">{t.language.note}</p></section>
 
       <section className="locale-trust" id="trust"><div><p className="micro-label dark">{t.trust.eyebrow}</p><h2>{t.trust.title}</h2><p>{t.trust.body}</p></div><div>{t.trust.points.map(([title, body])=><article key={title}><h3>{title}</h3><p>{body}</p></article>)}</div></section>
+
+      <section className="locale-security-rich"><div><p className="micro-label">{d.security.eyebrow}</p><h2>{d.security.title}</h2><p>{d.security.body}</p></div><div className="security-grid">{d.security.items.map(([title,body],index)=><article key={title}><span>{String(index+1).padStart(2,"0")}</span><h3>{title}</h3><p>{body}</p></article>)}</div></section>
+
+      <section className="locale-pilot-rich"><div><p className="micro-label">{d.pilot.eyebrow}</p><h2>{d.pilot.title}</h2><p>{d.pilot.body}</p></div><ol>{d.pilot.items.map(([number,title])=><li key={number}><span>{number}</span><strong>{title}</strong></li>)}</ol></section>
 
       <section className="final-section locale-final"><div className="final-brand"><Image src="/qanri/QANRI_Icon_DarkBackground.png" width={240} height={180} alt="QANRI"/><span>QANRI</span></div><p className="micro-label">{t.final.eyebrow}</p><h2>{t.final.title}</h2><p>{t.final.body}</p><Link className="button" href="/demo">{t.final.button}</Link></section>
     </main>
