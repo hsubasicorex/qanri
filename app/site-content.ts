@@ -46,12 +46,13 @@ export const pages: Record<string, PageContent> = {
   "solutions/automation-commissioning": { title: "Technical work should not disappear into message threads.", body: "Keep commissioning steps, findings, evidence, corrective work and final verification connected to the people and projects that produced them.", sections: [
     { title: "Keep the technical record connected.", body: "Follow work packages, findings, rework and closeout without burying technical teams in administration." },
   ]},
-  "why-qanri": { eyebrow: "WHY QANRI", title: "Built from the field. Built to direct the operation.", body: "QANRI was shaped around real operational work, where missing information, unclear responsibility and weak evidence create real consequences. The platform exists to turn that fragmented activity into operational truth.", sections: [
+  "why-qanri": { eyebrow: "WHAT QANRI MEANS", title: "The name defines the operating standard.", body: "QANRI is formed from Quality, Accountability, Navigation, Reliability and Intelligence. These five principles define how the platform records work, directs action and turns real operational activity into operational truth.", sections: [
     { title: "Quality", body: "Make the standard of work visible, measurable and ready to improve." },
     { title: "Accountability", body: "Show who did the work, when it happened and which evidence supports it." },
     { title: "Navigation", body: "Turn the operating record into the right person, decision and next action." },
     { title: "Reliability", body: "Preserve field reality with its versions, decisions and history intact." },
     { title: "Intelligence", body: "Transform operational activity into knowledge the company can use." },
+    { title: "Built from the field", body: "QANRI was shaped around real operational work, where missing information, unclear responsibility and weak evidence create direct consequences." },
     { title: "Know. Move. Prove.", body: "See the operation as it happened. Direct what comes next. Verify the result through responsibility, time and evidence." },
   ]},
   security: { eyebrow: "THE TRUSTED OPERATIONAL RECORD", title: "Operational intelligence begins with operational truth.", body: "QANRI connects responsibility, time, evidence, review and change history so every important answer can be traced back to the work itself.", sections: [
